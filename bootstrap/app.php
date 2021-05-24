@@ -1,9 +1,4 @@
 <?php
-
-header('Access-Control-Allow-Origin: localhost');
-// header('Access-Control-Allow-Methods: localhost');
-// header('Access-Control-Allow-Headers: localhost');
-
 /*
 |--------------------------------------------------------------------------
 | Create The Application

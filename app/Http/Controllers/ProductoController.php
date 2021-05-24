@@ -16,11 +16,10 @@ class ProductoController extends Controller
      */
     public function index(Request $request)
     {
-        // $productos = Producto::with(['user:id,email,name'])->paginate(10);
         $productos = Producto::with(['user:id,email,name'])
                                 ->whereCodigo($request->filter)
                                 ->orWhere('nombre', 'like', "%{$request->filter }%")
-                                ->paginate(10);
+                                ->paginate(50);
         return response()->json(['productos' => $productos], 200);
     }
 
